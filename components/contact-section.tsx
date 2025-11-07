@@ -32,12 +32,12 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Get in Touch</h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">Get in Touch</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
         </div>
@@ -47,49 +47,49 @@ export function ContactSection() {
           <div className="animate-fade-in">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Your Name</label>
+                <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Your Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none transition-colors duration-300"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Email Address</label>
+                <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none transition-colors duration-300"
                   placeholder="john@example.com"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Phone Number</label>
+                <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Phone Number</label>
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none transition-colors duration-300"
                   placeholder="+1 (555) 000-0000"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-2">Message</label>
+                <label className="block text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300 resize-none"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none transition-colors duration-300 resize-none"
                   placeholder="Tell us about your printing needs..."
                 ></textarea>
               </div>
@@ -112,8 +112,8 @@ export function ContactSection() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Phone</h3>
-                  <p className="text-slate-600">(+63) 123-456-7890</p>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 mb-1">Phone</h3>
+                  <p className="text-slate-600 dark:text-slate-400">(+63) 123-456-7890</p>
                 </div>
               </div>
 
@@ -122,8 +122,8 @@ export function ContactSection() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Email</h3>
-                  <p className="text-slate-600">info@gk3printing.com</p>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 mb-1">Email</h3>
+                  <p className="text-slate-600 dark:text-slate-400">info@gk3printing.com</p>
                 </div>
               </div>
 
@@ -132,8 +132,8 @@ export function ContactSection() {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-1">Address</h3>
-                  <p className="text-slate-600">123 Business Street, Manila, Philippines</p>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 mb-1">Address</h3>
+                  <p className="text-slate-600 dark:text-slate-400">123 Business Street, Manila, Philippines</p>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@ export function ContactSection() {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
@@ -153,7 +153,7 @@ export function ContactSection() {
 
             {/* Social Media Links */}
             <div className="space-y-4">
-              <h3 className="font-bold text-slate-900">Follow Us</h3>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100">Follow Us</h3>
               <div className="flex gap-4">
                 <a
                   href="https://facebook.com"

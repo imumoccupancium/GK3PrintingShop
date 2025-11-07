@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="w-full overflow-hidden bg-white">
+    <main className="w-full overflow-hidden bg-white dark:bg-slate-900">
       <Header />
       <Carousel />
       <AboutSection />

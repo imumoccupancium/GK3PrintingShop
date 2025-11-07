@@ -29,12 +29,12 @@ export function GallerySection() {
   ]
 
   return (
-    <section id="products" className="py-20 bg-white">
+    <section id="products" className="py-20 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Our Gallery</h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">Our Gallery</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Explore samples of our finest printing work across various categories.
           </p>
         </div>

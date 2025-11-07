@@ -1,6 +1,6 @@
 "use client"
 
-import { Printer, Package, Sparkles, Gift, BookOpen, FileText } from "lucide-react"
+import { Printer, Package, Sparkles, Gift, BookOpen, FileText, ArrowRight } from "lucide-react"
 
 export function ServicesSection() {
   const services = [
@@ -37,12 +37,12 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section id="services" className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Our Services</h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">Our Services</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             We offer a comprehensive range of printing solutions tailored to your needs.
           </p>
         </div>
@@ -52,15 +52,15 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-blue-300 animate-fade-in"
+              className="group p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-red-500 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{service.description}</p>
-              <div className="mt-6 inline-flex items-center text-blue-600 font-semibold group-hover:gap-2 gap-0 transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3">{service.title}</h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{service.description}</p>
+              <div className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:gap-2 gap-0 transition-all">
                 Learn more
                 <ArrowRight className="w-4 h-4 ml-2" />
               </div>
@@ -69,22 +69,5 @@ export function ServicesSection() {
         </div>
       </div>
     </section>
-  )
-}
-
-function ArrowRight(props: any) {
-  return (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-      <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
   )
 }

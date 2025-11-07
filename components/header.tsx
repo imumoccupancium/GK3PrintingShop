@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +18,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 shadow-md border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -37,7 +38,9 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-semibold transition-colors duration-300 relative pb-1 ${
-                    index === 0 ? "text-blue-600 border-b-2 border-blue-600" : "text-slate-600 hover:text-blue-600"
+                    index === 0 
+                      ? "text-blue-600 border-b-2 border-blue-600" 
+                      : "text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
                   }`}
                 >
                   {link.label}
@@ -45,23 +48,31 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 hover:bg-slate-100 rounded-lg transition-colors"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Theme Toggle */}
+            <div className="hidden md:flex ml-4">
+              <ThemeToggle />
+            </div>
+
+            {/* Mobile Actions */}
+            <div className="md:hidden flex items-center gap-2">
+              <ThemeToggle />
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-600 dark:text-slate-300"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <nav className="md:hidden pb-4 flex flex-col gap-3 animate-in fade-in duration-300">
+            <nav className="md:hidden pb-4 flex flex-col gap-3 animate-in fade-in duration-300 border-t border-slate-200 dark:border-slate-700 pt-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-slate-700 font-semibold hover:text-blue-600 transition-colors py-2"
+                  className="text-slate-700 dark:text-slate-300 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

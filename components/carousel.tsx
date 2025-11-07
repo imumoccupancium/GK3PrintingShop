@@ -82,7 +82,7 @@ export function Carousel() {
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-white/30 hover:bg-white/50 text-white rounded-full transition-all duration-300 hover:scale-110"
         aria-label="Previous slide"
       >
-        <ChevronLeft size={24} md={32} />
+        <ChevronLeft size={24} />
       </button>
 
       <button
@@ -90,7 +90,7 @@ export function Carousel() {
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-white/30 hover:bg-white/50 text-white rounded-full transition-all duration-300 hover:scale-110"
         aria-label="Next slide"
       >
-        <ChevronRight size={24} md={32} />
+        <ChevronRight size={24} />
       </button>
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3">
