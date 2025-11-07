@@ -14,25 +14,24 @@ const montserrat = Montserrat({
 
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'GK3 Printing Shop',
+  description: 'Your one-stop shop for all printing needs - Professional printing services in Manila, Philippines',
+  generator: 'GK3 Printing Shop',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/logo.png',
+        sizes: '32x32',
+        type: 'image/png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/logo.png',
+        sizes: '16x16',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/logo.png',
+    shortcut: '/logo.png',
   },
 }
 
