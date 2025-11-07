@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -9,9 +11,14 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-blue-600 rounded-lg flex items-center justify-center font-bold">
-                GK
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/logo.png"
+                  alt="GK3 Printing Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-bold">GK3 Printing</span>
             </div>
