@@ -1,20 +1,40 @@
 "use client"
 
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
+import { useParallax } from "@/hooks/use-scroll-animation"
 
 export function HeroSection() {
+  const offsetY = useParallax()
+
   return (
     <section id="home" className="relative w-full h-screen md:h-[600px] flex items-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div
+      {/* Parallax Background */}
+      <div 
         className="absolute inset-0 bg-gradient-to-r from-blue-600 to-red-500 opacity-90"
         style={{
-          backgroundImage: "url(/placeholder.svg?height=600&width=1200&query=colorful print samples)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          transform: `translateY(${offsetY * 0.5}px)`,
         }}
       >
+        <div className="absolute inset-0">
+          <Image
+            src="/printing-press-and-paper-rolls.jpg"
+            alt="Printing background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/95 to-red-500/95"></div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float-slow" />
+        <div className="absolute top-1/3 right-20 w-16 h-16 bg-yellow-300/20 rounded-full animate-float-medium" />
+        <div className="absolute bottom-1/4 left-1/4 w-12 h-12 bg-white/15 rounded-full animate-float-fast" />
+        <div className="absolute top-1/2 right-1/3 w-8 h-32 bg-white/10 rotate-12 animate-float-slow" />
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-yellow-300/15 rotate-45 animate-float-medium" />
       </div>
 
       {/* Content */}

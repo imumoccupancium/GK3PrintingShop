@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { ScrollIndicator } from '@/components/ui/scroll-indicator'
+import { FloatingShapes, ParticleBackground } from '@/components/ui/floating-elements'
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -48,6 +50,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ScrollIndicator />
+          <FloatingShapes />
+          <ParticleBackground />
           {children}
           <Analytics />
         </ThemeProvider>
