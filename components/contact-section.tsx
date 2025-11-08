@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -113,7 +113,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-slate-100 mb-1">Phone</h3>
-                  <p className="text-slate-600 dark:text-slate-400">(+63) 123-456-7890</p>
+                  <p className="text-slate-600 dark:text-slate-400">0936 313 0814</p>
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-slate-100 mb-1">Email</h3>
-                  <p className="text-slate-600 dark:text-slate-400">info@gk3printing.com</p>
+                  <p className="text-slate-600 dark:text-slate-400">jaimetarayo@gmail.com</p>
                 </div>
               </div>
 
@@ -133,7 +133,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-slate-100 mb-1">Address</h3>
-                  <p className="text-slate-600 dark:text-slate-400">123 Business Street, Manila, Philippines</p>
+                  <p className="text-slate-600 dark:text-slate-400">WEST ZAMORA STREET. PACO 1007</p>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ export function ContactSection() {
             {/* Google Maps Embed */}
             <div className="rounded-xl overflow-hidden shadow-lg h-80">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2345678901234!2d121.0000000!3d14.5994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7d8e1234567%3A0x1234567890abcdef!2sManila%2C%20Philippines!5e0!3m2!1sen!2sph!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15445.0!2d120.9847!3d14.5737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM0JzI1LjMiTiAxMjDCsDU5JzA1LjAiRQ!5e0!3m2!1sen!2sph!4v1234567890123&q=WEST+ZAMORA+STREET.+PACO,+1007"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -156,20 +156,12 @@ export function ContactSection() {
               <h3 className="font-bold text-slate-900 dark:text-slate-100">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/profile.php?id=100092409345722"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-300 hover:scale-110"
                 >
                   <Facebook size={24} />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
-                >
-                  <Instagram size={24} />
                 </a>
               </div>
             </div>
