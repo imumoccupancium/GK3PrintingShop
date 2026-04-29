@@ -4,7 +4,9 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ScrollIndicator } from '@/components/ui/scroll-indicator'
 import { FloatingShapes, ParticleBackground } from '@/components/ui/floating-elements'
+import { Toaster } from 'sonner'
 import './globals.css'
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -53,9 +55,11 @@ export default function RootLayout({
           <FloatingShapes />
           <ParticleBackground />
           {children}
+          <Toaster position="top-center" richColors />
           <Analytics />
         </ThemeProvider>
       </body>
     </html>
+
   )
 }

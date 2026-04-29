@@ -16,7 +16,9 @@ export function Header() {
     { href: "#gallery", label: "PORTFOLIO" },
     { href: "#contact", label: "CONTACT" },
     { href: "/directions", label: "DIRECTIONS" },
+    { href: "/upload", label: "UPLOAD" },
   ]
+
 
   return (
     <>
